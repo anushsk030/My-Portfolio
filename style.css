@@ -1,0 +1,66 @@
+.whole{
+     
+     height: 2000px;
+     width: 100%;
+     background: linear-gradient(60deg, rgb(50, 12, 188), deepskyblue);
+     width: 100%;
+    background-image:url(back.jpg);
+    
+}
+
+.fox{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border:solid;
+    border-color: black;
+    position:absolute;
+    top: 20%;
+    left: 10%;
+}
+.text{
+    font-size: xx-large;
+    font-family: "Playfair Display",serif;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    
+}
+.para{
+   
+    width: 80%; /* Adjust width to control how much space the text takes */
+    max-width: 450px; /* Optional: Maximum width to limit the width */
+    
+    
+    font-family: cursive;
+    position: absolute;
+    color: blanchedalmond;
+    top: 20%; /* Adjust vertical position as needed */
+    left: 30%; /* Adjust horizontal position as needed */
+    overflow: hidden; /* Ensure text doesn't overflow */
+    padding: 10px;
+    box-sizing: border-box;
+    transform: translateX(-200%); /* Start position off-screen */
+    animation: slideIn 1s ease-out forwards; /* Adjust timing and easing */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-200%); /* Start position off-screen */
+    }
+    to {
+        transform: translateX(0); /* End position on-screen */
+    }
+}
+.bord{
+    height: 1850px;
+    position: absolute;
+    top: 10%; /* Adjust as needed */
+    left: 5%; /* Adjust as needed */
+    right: 5%; /* Adjust as needed */
+    bottom: 10%; /* Adjust as needed */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border: 5px solid gold; /* Solid frame */
+    border-radius: 15px; /* Rounded corners (optional) */
+    color: white; /* Text color inside the frame */
+}
