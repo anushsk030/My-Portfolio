@@ -1,59 +1,49 @@
-.whole{
-     
-     height: 2000px;
-     width: 100%;
-     background: linear-gradient(60deg, rgb(50, 12, 188), deepskyblue);
-     width: 100%;
-    background-image:url(back.jpg);
-    
+body {
+    background-image: url(back.jpg);
+    width: 1000px;
 }
 
-.fox{
+.whole {
+    height: 2500px;
+    width: 1000px;
+}
+
+.fox {
     border-radius: 50%;
     height: 200px;
     width: 200px;
-    border:solid;
+    border: solid;
     border-color: black;
-    position:absolute;
-    top: 20%;
-    left: 10%;
-}
-.text{
-    font-size: xx-large;
-    font-family: "Playfair Display",serif;
     position: absolute;
-    top: 35%;
-    left: 10%;
-    
+    top: 10%;
+    left: 40%;
 }
-.para{
-   
+
+.para {
     width: 80%; /* Adjust width to control how much space the text takes */
-    max-width: 450px; /* Optional: Maximum width to limit the width */
-    
-    
+   
     font-family: cursive;
     position: absolute;
     color: blanchedalmond;
     top: 20%; /* Adjust vertical position as needed */
-    left: 30%; /* Adjust horizontal position as needed */
+    left: 10%; /* Adjust horizontal position as needed */
     overflow: hidden; /* Ensure text doesn't overflow */
     padding: 10px;
     box-sizing: border-box;
-    transform: translateX(-200%); /* Start position off-screen */
-    animation: slideIn 1s ease-out forwards; /* Adjust timing and easing */
+    white-space: nowrap;
+    
+    animation: typing 8s steps(90, end), blink-caret 0.75s step-end infinite;
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateX(-200%); /* Start position off-screen */
-    }
-    to {
-        transform: translateX(0); /* End position on-screen */
-    }
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
 }
-.bord{
-    height: 1850px;
+
+
+
+.bord {
+    height: 2350px;
     position: absolute;
     top: 10%; /* Adjust as needed */
     left: 5%; /* Adjust as needed */
@@ -64,3 +54,185 @@
     border-radius: 15px; /* Rounded corners (optional) */
     color: white; /* Text color inside the frame */
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+    left: 50%;
+    margin-top: 20px;
+    padding: 0 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px; /* Add padding for better appearance */
+    background-color: transparent; /* Set background color */
+    border: 2px solid gold; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    color: gold; /* Text color */
+    font-size: 16px; /* Increase font size */
+}
+
+button:hover {
+    background-color: aliceblue;
+}
+.edu{
+    text-decoration: underline;
+    size: 20px;
+    position: absolute;
+    left: 45%;
+    color: gold;
+    top: 30%;
+}
+.container-2{
+    display: flex;
+    height: 300px;
+    width: 1050px;
+   
+    
+    flex-direction: row;
+   position: absolute;
+    top: 30%;
+    margin: 20px;
+    border: solid gold;
+   
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+   column-gap: 250px;
+}
+.school{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+   justify-content: center;
+   height: 200px;
+   width: 200px;
+   border-radius: 20px;
+   border:solid;
+   border-color: rgb(39, 57, 221);
+  
+   
+}
+#ehss{
+    background-image: url(emmanuels.jpg);
+    background-size: cover;
+    background-position: center;
+   
+   
+    
+}
+#sjcet{
+  background-image: url(Sjc13.jpg);
+  background-size: cover;
+  background-position: center;
+ 
+}
+.abc{
+    
+    
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   position: absolute ;
+   top: 75%;
+   left: 15%;
+   font-style: italic;
+}
+.abc2{
+    
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute ;
+    top: 75%;
+    left: 65%;
+    font-style: italic;
+ }
+ .skills{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    text-decoration: underline;
+    color: gold;
+   
+    
+ }
+ .container-3{
+    display: flex;
+    height: 300px;
+    width: 1050px;
+   
+    
+    flex-direction: row;
+   position: absolute;
+    top: 48%;
+    margin: 10px;
+    border: solid gold;
+   
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+   column-gap: 40px;
+}
+.pic{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+   justify-content: center;
+   height: 150px;
+   width: 150px;
+   
+   border-color: rgb(39, 57, 221);
+   
+}
+.container-4{
+    display: flex;
+    height: 200px;
+    width: 1050px;
+   
+    
+    flex-direction: row;
+   position: absolute;
+    top: 65%;
+    margin: 10px;
+    
+   
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+   column-gap: 50px;
+}
+ .cntct{
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    text-decoration: underline;
+    color: gold;
+ }
+ .icon{
+    display: block;
+    height: 50px;
+    width: 50px;
+    
+  
+ }
+ #gmail{
+   background-image: url(gmu.png);
+   background-size: cover;
+   background-position: center;
+ }
+ #whatsapp{
+    background-image: url(whatsapp.png);
+    background-size: cover;
+   background-position: center;
+ }
+ #linked{
+    background-image: url(link.png);
+    background-size: cover;
+   background-position: center;
+ }
+ #git{
+    background-image: url(gh.jpeg);
+    background-size: cover;
+    background-position: center;
+ }
