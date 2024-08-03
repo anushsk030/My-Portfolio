@@ -94,15 +94,74 @@ button:hover {
     
     flex-direction: row;
    position: absolute;
-    top: 30%;
+    top: 0%;
     margin: 20px;
-    border: solid gold;
    
+   z-index: 2;
     justify-content: center;
     align-items: center;
     margin: 150px;
    column-gap: 250px;
 }
+.container-2 {
+    display: flex;
+    height: 300px;
+    width: 1050px;
+    flex-direction: row;
+    position: absolute;
+    top: 5%;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+    column-gap: 250px;
+    position: relative; /* Ensure proper stacking context */
+}
+
+.anim-1 {
+    height: 300px;
+    width: 1050px;
+    position: absolute;
+    top: 25%;
+    margin: 150px;
+    position: relative; /* Ensure proper positioning for pseudo-elements */
+    overflow: hidden; /* Prevent overflow of pseudo-elements */
+}
+
+.anim-1::before {
+    content: "";
+    background-image: conic-gradient(transparent,red);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place it above the after element */
+    animation: rotate 3s linear infinite; /* Apply rotation animation */
+}
+
+.anim-1::after {
+    content: "";
+    height: 295px;
+    width: 1045px;
+    background-color: black;
+    position: absolute;
+    top: 2.5px; /* Center it inside the rotating border */
+    left: 2.5px;
+    z-index: 1; /* Place it above the before element */
+    border-radius: 2em; /* Match border-radius of anim-1 */
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
 .school{
     display: block;
     padding-right: 20px;
